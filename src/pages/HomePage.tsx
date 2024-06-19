@@ -1,5 +1,7 @@
+import HeroLanding from "../ui/HeroLanding";
+
 function HomePage() {
-  return <>{/* <p>te</p> */}</>;
+  return <>{<HeroLanding />}</>;
 }
 
 export default HomePage;
