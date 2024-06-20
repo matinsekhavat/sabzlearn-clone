@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import HeroLanding from "../ui/HeroLanding";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import CoursesList from "../features/courses/CoursesList";
+import { courses } from "../services/data";
 
 function HomePage() {
   return (
@@ -24,6 +26,8 @@ function HomePage() {
           </div>
         </div>
       </div>
+      {/* Courses */}
+      <CoursesList courses={courses} />
     </>
   );
 }
