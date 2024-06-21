@@ -7,6 +7,9 @@ export default {
         center: "true",
         padding: "1rem",
       },
+      fontFamily: {
+        dana: "dana",
+      },
     },
   },
   plugins: [],
