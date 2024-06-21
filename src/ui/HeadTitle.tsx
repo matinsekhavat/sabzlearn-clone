@@ -19,7 +19,7 @@ function HeadTitle({ children, color, title, subTitle }: headTitleProps) {
             ></div>
             <h3 className="text-xl font-semibold  ">{title}</h3>
           </div>
-          <span className="text-gray-400 mt-2">{subTitle}</span>
+          <span className="text-gray-400 mt-2 inline-block">{subTitle}</span>
         </div>
         {/* Links */}
         <div className="flex items-center gap-2 text-lg text-green-500">
