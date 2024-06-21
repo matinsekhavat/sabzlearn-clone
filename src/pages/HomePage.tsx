@@ -4,6 +4,7 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import CoursesList from "../features/courses/CoursesList";
 import { courses } from "../services/data";
 import RoadmapList from "../ui/RoadmapList";
+import HeadTitle from "../ui/HeadTitle";
 
 function HomePage() {
   return (
@@ -11,27 +12,25 @@ function HomePage() {
       <HeroLanding />
       {/* Show Last courses
        */}
-      <div className="container my-2">
-        <div className="flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
-          {/* text for last courses */}
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-2 ">
-              آخرین دوره های سبزلرن
-            </h3>
-            <span className="text-gray-400">سکوی پرتاپ شما به سمت موفقیت</span>
-          </div>
-          {/* Links */}
-          <div className="flex items-center gap-2 text-lg text-green-500">
-            <Link to="/">مشاهده همه دوره ها</Link>
-            <FaLongArrowAltLeft className="mt-1" />
-          </div>
-        </div>
-      </div>
+      <HeadTitle
+        color="rgb(251 191 36)"
+        title="آخرین دوره های سبزلرن"
+        subTitle="سکوی پرتاپ شما به سمت موفقیت"
+      >
+        <Link to="/">مشاهده همه دوره ها</Link>
+        <FaLongArrowAltLeft className="mt-1" />
+      </HeadTitle>
       {/* Courses */}
       <CoursesList courses={courses} />
 
       {/* Roadmap */}
       <RoadmapList />
+      {/* sabzlearn suggestion */}
+      <HeadTitle
+        title="پیشنهاد سبزلرن"
+        subTitle="جدید ترین دوره های تکمیل شده"
+        color="green"
+      />
     </>
   );
 }
