@@ -1,5 +1,6 @@
 import { BiUser } from "react-icons/bi";
 import { FaStar, FaUsers } from "react-icons/fa";
+import { e2p, sp } from "../../utils/replaceNumber";
 
 function CourseItem() {
   return (
@@ -13,7 +14,7 @@ function CourseItem() {
         />
         {/* discount */}
         <div className="bg-green-600 text-white px-4 py-1 absolute top-4 right-4 rounded-full text-sm">
-          60%
+          {e2p("60")}%
         </div>
       </div>
       {/* downside */}
@@ -32,7 +33,7 @@ function CourseItem() {
             <span>محمد امین سعیدی راد</span>
           </div>
           <div className="text-yellow-500 flex items-center gap-2">
-            <span>5.0</span>
+            <span>{e2p("5.0")}</span>
             <FaStar className="fill-yellow-500" />
           </div>
           {/* price box */}
@@ -44,9 +45,9 @@ function CourseItem() {
             <span>1918</span>
           </div>
           <div>
-            <span className="line-through">4,800,00</span>
+            <span className="line-through text-gray-500">{sp(4800000)}</span>
             <div className="text-green-600 font-semibold">
-              <span className="">1,920,000</span>
+              <span className="">{sp(1920000)}</span>
               <span className="mr-2">تومان</span>
             </div>
           </div>
