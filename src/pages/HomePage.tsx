@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import HeroLanding from "../ui/HeroLanding";
-import { FaLongArrowAltLeft } from "react-icons/fa";
 import CoursesList from "../features/courses/CoursesList";
-import { courses } from "../services/data";
 import RoadmapList from "../ui/RoadmapList";
 import HeadTitle from "../ui/HeadTitle";
+import { Link } from "react-router-dom";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { courses } from "../services/data";
 
 function HomePage() {
   return (
@@ -21,9 +21,10 @@ function HomePage() {
         <FaLongArrowAltLeft className="mt-1" />
       </HeadTitle>
       {/* Courses */}
-      <CoursesList courses={courses} />
+      <CoursesList courses={courses} isCarousel={false} />
 
       {/* Roadmap */}
+
       <RoadmapList />
       {/* sabzlearn suggestion */}
       <HeadTitle
@@ -31,6 +32,16 @@ function HomePage() {
         subTitle="جدید ترین دوره های تکمیل شده"
         color="green"
       />
+      <CoursesList courses={courses} isCarousel={true} />
+
+      {/* how we can help you */}
+      <section>
+        <HeadTitle
+          color="#3b82f6"
+          title="ما چه کمکی میتونیم بهت بکنیم"
+          subTitle="از شروع مسیر کنارتیم نمیذاریم آب تو دلت تکون بخوره"
+        />
+      </section>
     </>
   );
 }
