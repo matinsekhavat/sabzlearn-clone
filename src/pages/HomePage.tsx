@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { courses } from "../services/data";
 import OurServices from "../ui/OurServices";
+import { BiBook } from "react-icons/bi";
+import { TbMessageCircleHeart } from "react-icons/tb";
+import { BsBarChart } from "react-icons/bs";
 
 function HomePage() {
   return (
@@ -44,11 +47,43 @@ function HomePage() {
           subTitle="از شروع مسیر کنارتیم نمیذاریم آب تو دلت تکون بخوره"
         />
 
-        <div className="grid grid-cols-1 gap-4 container md:grid-cols-2 ">
-          <OurServices />
-          <OurServices />
-          <OurServices />
-          <OurServices />
+        <div className="grid grid-cols-1 gap-8 container md:grid-cols-2 ">
+          <OurServices
+            title="تضمین کاملترین محتوا"
+            description="بزار خیالت راحت کنم توی دوره هامون به ریز ترین موارد پرداختیم بعداز دیدن این دوره نیاز به هیچ آموزش دیگه ای نداری."
+            icon={
+              <BiBook className="text-[2.5rem] text-blue-600 -mt-4 lg:mt-0 lg:-mr-6" />
+            }
+            iconBgInstance="rgb(196, 209, 238, 0.2)"
+            iconColor="red"
+          />{" "}
+          <OurServices
+            title="پشتیبانی دائمی"
+            description="هرجا سوالی داشتی به مشکل خوردی بچه های تیم آمادن که مشکلت رو حل کنن تلاشمون اینه بدون نگرانی دوره رو کامل کنی."
+            icon={
+              <TbMessageCircleHeart className="text-[2.5rem] text-yellow-400 -mt-4 lg:mt-0 lg:-mr-6" />
+            }
+            iconBgInstance="rgb(235, 252, 0 , 0.2)"
+            iconColor="red"
+          />{" "}
+          <OurServices
+            title="پروژه محور در راستای بازار کار"
+            description="کل تمرکز ما رو این هستش بعداز تموم شدن دوره شخص بتونه با اعتماد به نفس کامل پروژه بزنه واقدام کنه برای کسب درآمد."
+            icon={
+              <BsBarChart className="text-[2.5rem] text-green-600 -mt-4 lg:mt-0 lg:-mr-6" />
+            }
+            iconBgInstance="rgb(53, 221, 31,0.2)"
+            iconColor="red"
+          />{" "}
+          <OurServices
+            title="سراغ حرفه ای ها رفتیم"
+            description="به جرعت میتونم بگم سخت گیرترین شرایط جذب مدرس داریم چون برامون مهمه محتوا خیلی ساده و روان بیان بشه که توی یادگیری به مشکل نخورید."
+            icon={
+              <BiBook className="text-[2.5rem] text-red-500 -mt-4 lg:mt-0 lg:-mr-6" />
+            }
+            iconBgInstance="rgb(233, 129, 129 , 0.2)"
+            iconColor="red"
+          />
         </div>
       </section>
     </>
