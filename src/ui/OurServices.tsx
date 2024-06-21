@@ -8,7 +8,7 @@ function OurServices() {
         <BiBook className="text-[2.5rem] text-blue-600 -mt-4 lg:mt-0 lg:-mr-6" />
       </div>
       <div className="text-center mt-2">
-        <h1 className="text-slate-900 font-semibold lg:text-xl">
+        <h1 className="text-slate-800 font-semibold lg:text-xl">
           تضمین کاملترین محتوا
         </h1>
         <p className="text-sm mt-2 text-stone-500 lg:text-base">
