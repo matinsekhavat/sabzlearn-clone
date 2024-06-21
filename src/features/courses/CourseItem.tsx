@@ -18,7 +18,7 @@ function CourseItem() {
         </div>
       </div>
       {/* downside */}
-      <div className="p-2">
+      <div className="p-4">
         <h3 className="text-slate-950  line-clamp-2 font-semibold">
           آموزش ری اکت ( ReactJS ) در دنیای واقعی | از 0 تا استخدام [منتورشیپ]
         </h3>
