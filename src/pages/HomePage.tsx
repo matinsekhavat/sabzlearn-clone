@@ -3,6 +3,7 @@ import HeroLanding from "../ui/HeroLanding";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import CoursesList from "../features/courses/CoursesList";
 import { courses } from "../services/data";
+import RoadmapList from "../ui/RoadmapList";
 
 function HomePage() {
   return (
@@ -28,6 +29,9 @@ function HomePage() {
       </div>
       {/* Courses */}
       <CoursesList courses={courses} />
+
+      {/* Roadmap */}
+      <RoadmapList />
     </>
   );
 }
