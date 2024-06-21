@@ -13,7 +13,7 @@ export default function RoadmapList() {
         </p>
       </div>
       {/* List */}
-      <div className="grid grid-cols-2 my-8 gap-4 sm:grid-cols-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 my-8 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         <RoadmapItem
           title="فرانت اند"
           courseCount={28}
