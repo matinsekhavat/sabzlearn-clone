@@ -5,6 +5,7 @@ import HeadTitle from "../ui/HeadTitle";
 import { Link } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { courses } from "../services/data";
+import OurServices from "../ui/OurServices";
 
 function HomePage() {
   return (
@@ -24,23 +25,31 @@ function HomePage() {
       <CoursesList courses={courses} isCarousel={false} />
 
       {/* Roadmap */}
-
-      <RoadmapList />
-      {/* sabzlearn suggestion */}
-      <HeadTitle
-        title="پیشنهاد سبزلرن"
-        subTitle="جدید ترین دوره های تکمیل شده"
-        color="green"
-      />
-      <CoursesList courses={courses} isCarousel={true} />
+      <section>
+        <RoadmapList />
+        {/* sabzlearn suggestion */}
+        <HeadTitle
+          title="پیشنهاد سبزلرن"
+          subTitle="جدید ترین دوره های تکمیل شده"
+          color="green"
+        />
+        <CoursesList courses={courses} isCarousel={true} />
+      </section>
 
       {/* how we can help you */}
-      <section>
+      <section className="my-4">
         <HeadTitle
           color="#3b82f6"
           title="ما چه کمکی میتونیم بهت بکنیم"
           subTitle="از شروع مسیر کنارتیم نمیذاریم آب تو دلت تکون بخوره"
         />
+
+        <div className="grid grid-cols-1 gap-4 container md:grid-cols-2 ">
+          <OurServices />
+          <OurServices />
+          <OurServices />
+          <OurServices />
+        </div>
       </section>
     </>
   );
