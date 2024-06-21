@@ -1,7 +1,6 @@
-import { BiUser } from "react-icons/bi";
-import { FaStar } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
 import CourseItem from "./CourseItem";
+import { Pagination } from "swiper/modules";
 
 export type courseProps = {
   background_url: string;
@@ -15,15 +14,56 @@ export type courseProps = {
 };
 type courseListProps = {
   courses: courseProps[];
+  isCarousel: boolean;
 };
 
-function CoursesList({ courses }: courseListProps) {
-  return (
-    <div className="container my-8 grid grid-cols-1 sm:grid-cols-2 gap-7">
-      <CourseItem />
-      <CourseItem />
-    </div>
-  );
+function CoursesList({ courses, isCarousel }: courseListProps) {
+  if (!isCarousel)
+    return (
+      <div className="container my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+        <CourseItem />
+        <CourseItem />
+        <CourseItem />
+      </div>
+    );
+  if (isCarousel) {
+    return (
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CourseItem />
+        </SwiperSlide>
+      </Swiper>
+    );
+  }
 }
 
 export default CoursesList;
