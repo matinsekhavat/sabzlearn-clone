@@ -40,7 +40,7 @@ function HomePage() {
       </section>
 
       {/* how we can help you */}
-      <section className="my-4">
+      <section className="mt-16">
         <HeadTitle
           color="#3b82f6"
           title="ما چه کمکی میتونیم بهت بکنیم"
@@ -88,7 +88,7 @@ function HomePage() {
       </section>
 
       {/* Sabzleran Weblog */}
-      <section>
+      <section className="mt-16">
         <HeadTitle
           color="yellow"
           title="وبلاگ آموزشی سبزلرن"
