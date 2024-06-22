@@ -86,6 +86,18 @@ function HomePage() {
           />
         </div>
       </section>
+
+      {/* Sabzleran Weblog */}
+      <section>
+        <HeadTitle
+          color="yellow"
+          title="وبلاگ آموزشی سبزلرن"
+          subTitle="مقالات بروز برنامه نویسی"
+        >
+          <Link to="/">مشاهده همه مقالات </Link>
+          <FaLongArrowAltLeft className="mt-1" />
+        </HeadTitle>
+      </section>
     </>
   );
 }
