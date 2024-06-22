@@ -38,9 +38,9 @@ function CourseItem() {
           </div>
           {/* price box */}
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-end justify-between">
           {/* student count */}
-          <div className="text-stone-500">
+          <div className="text-stone-500 flex items-center gap-2">
             <FaUsers />
             <span>1918</span>
           </div>
