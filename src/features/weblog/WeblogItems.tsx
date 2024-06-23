@@ -1,5 +1,6 @@
 import { BiArrowToLeft, BiCalendar } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
+import { e2p } from "../../utils/replaceNumber";
 
 function WeblogItems() {
   return (
@@ -32,7 +33,7 @@ function WeblogItems() {
             <span className="text-base">
               <BiCalendar />
             </span>
-            <span>1403/03/30</span>
+            <span>{e2p("1403/03/03")}</span>
           </div>
         </div>
       </div>
