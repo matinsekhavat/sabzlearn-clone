@@ -9,6 +9,7 @@ import OurServices from "../ui/OurServices";
 import { BiBook } from "react-icons/bi";
 import { TbMessageCircleHeart } from "react-icons/tb";
 import { BsBarChart } from "react-icons/bs";
+import WeblogItems from "../features/weblog/WeblogItems";
 
 function HomePage() {
   return (
@@ -88,7 +89,7 @@ function HomePage() {
       </section>
 
       {/* Sabzleran Weblog */}
-      <section className="mt-16">
+      <section className="mt-16 container">
         <HeadTitle
           color="yellow"
           title="وبلاگ آموزشی سبزلرن"
@@ -97,6 +98,13 @@ function HomePage() {
           <Link to="/">مشاهده همه مقالات </Link>
           <FaLongArrowAltLeft className="mt-1" />
         </HeadTitle>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <WeblogItems />
+          <WeblogItems />
+          <WeblogItems />
+          <WeblogItems />
+        </div>
       </section>
     </>
   );
