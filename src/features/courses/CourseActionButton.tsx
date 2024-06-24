@@ -20,7 +20,7 @@ function CourseActionButton({
   return (
     <>
       <button
-        className="bg-white rounded-xl text-center py-4 block w-full"
+        className="bg-white rounded-xl text-center py-4 block w-full text-sm sm:text-base "
         onClick={openHandler}
       >
         {children}
