@@ -9,15 +9,15 @@ type headTitleProps = {
 function HeadTitle({ children, color, title, subTitle }: headTitleProps) {
   return (
     <div className="container my-2">
-      <div className="flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:justify-between">
         {/* text for last courses */}
         <div className="text-center">
-          <div className="flex  items-center  gap-2">
+          <div className="flex  items-center justify-center  gap-2">
             <div
               style={{ backgroundColor: `${color}` }}
               className="size-5  rounded-md hidden sm:block"
             ></div>
-            <h3 className="text-xl font-semibold  ">{title}</h3>
+            <h3 className="text-xl font-semibold   ">{title}</h3>
           </div>
           <span className="text-gray-400 mt-2 inline-block">{subTitle}</span>
         </div>
