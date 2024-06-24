@@ -2,9 +2,16 @@ import { BiArrowToLeft, BiCalendar } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
 import { e2p } from "../../utils/replaceNumber";
 
-function WeblogItems() {
+type WeblogProps = {
+  title: string;
+  description: string;
+  author: string;
+  date: string;
+};
+
+function WeblogItems({ author, date, description, title }: WeblogProps) {
   return (
-    <div className="p-4 bg-white rounded-xl flex flex-col gap-8">
+    <div className="p-4 bg-white rounded-xl flex flex-col gap-8 justify-between">
       <div className="relative h-[182px]">
         <img
           src="https://sabzlearn.ir/wp-content/uploads/2024/05/1.1-1-768x427.webp"
@@ -15,25 +22,21 @@ function WeblogItems() {
       </div>
       {/* middle section */}
       <div>
-        <h2 className="line-clamp-2 text-slate-800">
-          پایگاه داده یا دیتابیس چیست؟ از انواع تا کاربرد دیتابیس
-        </h2>
+        <h2 className="line-clamp-2 text-slate-800">{title}</h2>
         <p className="line-clamp-4 text-sm text-stone-500 my-4">
-          دیتابیس چیست؟ دیتابیس، فقط یک سری از جداول و رکوردهای خشک و بی‌روح
-          نیست. بلکه یک دیدگاه جامع و یک نگرش زنده به مدیریت و ذخیره‌سازی
-          داده‌هاست. در این مقاله…
+          {description}
         </p>
         {/* Author and Date - group */}
         <div className="flex items-center justify-between flex-wrap text-stone-500 text-sm">
           <div className="flex items-center gap-1">
             <FaUser />
-            <span>متین سخاوت</span>
+            <span>{author}</span>
           </div>
           <div className="flex items-center gap-2 ">
             <span className="text-base">
               <BiCalendar />
             </span>
-            <span>{e2p("1403/03/03")}</span>
+            <span>{e2p(date)}</span>
           </div>
         </div>
       </div>
