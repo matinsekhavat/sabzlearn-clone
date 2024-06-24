@@ -22,13 +22,13 @@ function CourseFilter() {
     // mobile design
     <div>
       {/* searchBar */}
-      <div className="p-2 relative bg-white rounded-md text-stone-600 flex items-center gap-2">
+      <div className="max-w-full bg-white rounded-md text-stone-600 flex items-center gap-2 py-2">
         <input
           type="text"
           placeholder="جستجو بین دوره ها"
-          className=" p-2 flex-1  rounded-md border-none outline-none"
+          className="w-full p-2 flex-1 rounded-md border-none outline-none"
         />
-        <button className="size-8 flex items-center justify-center rounded-md ">
+        <button className="size-8 flex items-center justify-center rounded-md">
           <FaMagnifyingGlass />
         </button>
       </div>
