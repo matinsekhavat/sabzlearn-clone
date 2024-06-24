@@ -22,7 +22,7 @@ function HomePage() {
         title="آخرین دوره های سبزلرن"
         subTitle="سکوی پرتاپ شما به سمت موفقیت"
       >
-        <Link to="/">مشاهده همه دوره ها</Link>
+        <Link to="/courses">مشاهده همه دوره ها</Link>
         <FaLongArrowAltLeft className="mt-1" />
       </HeadTitle>
       {/* Courses */}
