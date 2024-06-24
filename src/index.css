@@ -6,6 +6,32 @@
   body {
     @apply bg-gray-100 font-dana;
   }
+
+  body {
+    --sb-track-color: #dcdfe0;
+    --sb-thumb-color: #00d66b;
+    --sb-size: 11px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 2px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 2px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
 }
 
 @layer components {
