@@ -22,7 +22,6 @@ type desktopNav = {
 type navProps = mobileNav | desktopNav;
 
 function Nav({ display, isShow, handleCloseNav }: navProps) {
-  console.log(display);
   const mobileRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(mobileRef, handleCloseNav, true);
