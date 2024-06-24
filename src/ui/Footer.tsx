@@ -42,7 +42,7 @@ function Footer() {
           />
         </div>
         {/* footer downside */}
-        <div className="border-t border-stone-300 py-4 flex flex-col gap-y-6 sm:flex-row sm:justify-between">
+        <div className="border-t border-stone-300 py-8 my-4 flex flex-col gap-y-6 sm:flex-row sm:justify-between">
           <p>ساخته شده با 💖 در سبزلرن</p>
           <p className="text-slate-700">
             کلیه حقوق مادی و معنوی سایت برای سبز لرن محفوظ است.
