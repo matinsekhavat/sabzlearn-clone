@@ -28,8 +28,8 @@ function CourseFilter() {
           placeholder="جستجو بین دوره ها"
           className="w-full p-2 flex-1 rounded-md border-none outline-none"
         />
-        <button className="size-8 flex items-center justify-center rounded-md">
-          <FaMagnifyingGlass />
+        <button className="flex items-center justify-center rounded-md ml-2">
+          <FaMagnifyingGlass className="text-2xl size-full p-1" />
         </button>
       </div>
       {/* action buttons */}
