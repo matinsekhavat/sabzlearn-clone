@@ -1,23 +1,16 @@
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import CourseActionButton from "./CourseActionButton";
-import { useState } from "react";
+import { useFilter } from "../../context/FilterContext";
 
 function CourseFilter() {
-  const [isFilterVisible, setIsFilterVisible] = useState<boolean>(false);
-  const [isCourseVisible, setIsCourseVisible] = useState<boolean>(false);
-
-  function filterMenuHandler() {
-    setIsFilterVisible(true);
-  }
-  function courseMenuHandler() {
-    setIsCourseVisible(true);
-  }
-  function closeFilterMenuHander() {
-    setIsFilterVisible(false);
-  }
-  function closeCourseMenuHander() {
-    setIsCourseVisible(false);
-  }
+  const {
+    isFilterVisible,
+    isCourseVisible,
+    closeCourseMenuHander,
+    closeFilterMenuHander,
+    courseMenuHandler,
+    filterMenuHandler,
+  } = useFilter();
   return (
     // mobile design
     <div>
