@@ -1,10 +1,11 @@
-import CourseFilter from "../features/courses/CourseFilter";
+import CoursesList from "../features/courses/CoursesList";
+import CoursesLayout from "../ui/CoursesLayout";
 import HeadTitle from "../ui/HeadTitle";
 import { e2p } from "../utils/replaceNumber";
 
 function Courses() {
   return (
-    <div className="container">
+    <div className="w-full px-8">
       <HeadTitle
         title="دوره ها"
         subTitle="همه دوره ها در یک نگاه"
@@ -12,7 +13,9 @@ function Courses() {
       >
         {e2p("44")}عنوان اموزشی
       </HeadTitle>
-      <CourseFilter />
+      <CoursesLayout>
+        <CoursesList courses={[]} isCarousel={false} isAside={true} />
+      </CoursesLayout>
     </div>
   );
 }
