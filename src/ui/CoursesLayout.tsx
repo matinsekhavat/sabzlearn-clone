@@ -12,14 +12,15 @@ function CoursesLayout({ children }: CoursesLayoutProps) {
     <div className="grid grid-cols-1 gap-4  md:grid-cols-[300px_1fr] md:my-8 items-start">
       <CourseFilter />
       <div>
-        <div className="hidden md:flex md:items-center gap-4 bg-white h-16 p-2 rounded-xl my-2">
+        <div className="hidden md:flex md:items-center gap-4 bg-white h-16 px-2 rounded-xl mb-2">
           <div className="flex items-center gap-2 text-xl text-slate-900">
             <span>
               <TbArrowsSort />
             </span>
             <p>مرتب سازی بر اساس:</p>
           </div>
-          <div className="flex items-center  gap-4">
+          {/* DESKTOP SORT BY section */}
+          <div className="flex items-center  gap-4 h-full">
             <SortBy
               useFor="desktop"
               value="all"
@@ -39,6 +40,13 @@ function CoursesLayout({ children }: CoursesLayoutProps) {
               value="expensive"
               onSortClick={sortByHandler}
               sortBy="گران ترین"
+              currValue={sortBy}
+            />{" "}
+            <SortBy
+              useFor="desktop"
+              value="popular"
+              onSortClick={sortByHandler}
+              sortBy="پرمخاطب ها"
               currValue={sortBy}
             />
           </div>
