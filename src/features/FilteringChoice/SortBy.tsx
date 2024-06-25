@@ -33,16 +33,22 @@ function SortBy({
   }
   if (useFor === "desktop") {
     return (
-      <div className="">
-        <button
-          onClick={() => onSortClick(value)}
-          style={{ color: value === currValue ? "green" : "" }}
-        >
-          {sortBy}
-        </button>
+      <div
+        className="h-full flex items-center"
+        style={{
+          ...(value === currValue && {
+            borderTop: "2px solid rgb(14 165 233)",
+            color: "rgb(14 165 233)",
+            borderBottom: "2px solid rgb(14 165 233)",
+          }),
+        }}
+      >
+        <button onClick={() => onSortClick(value)}>{sortBy}</button>
       </div>
     );
   }
 }
 
 export default SortBy;
+
+// color: value === currValue ? "green" : "" ,
