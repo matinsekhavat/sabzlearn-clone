@@ -13,11 +13,16 @@ export type courseProps = {
   discountPrice: number;
 };
 type courseListProps = {
-  courses: courseProps[];
+  courses: courseProps[] | [];
   isCarousel: boolean;
+  isAside: boolean;
 };
 
-function CoursesList({ courses, isCarousel }: courseListProps) {
+function CoursesList({
+  courses,
+  isCarousel,
+  isAside = false,
+}: courseListProps) {
   if (isCarousel) {
     return (
       <div className="container">
@@ -55,6 +60,15 @@ function CoursesList({ courses, isCarousel }: courseListProps) {
             <CourseItem />
           </SwiperSlide>
         </Swiper>
+      </div>
+    );
+  }
+  if (isAside) {
+    return (
+      <div className="container  grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <CourseItem />
+        <CourseItem />
+        <CourseItem />
       </div>
     );
   }
