@@ -1,6 +1,5 @@
 import { IoCloseOutline } from "react-icons/io5";
 import SortBy from "../FilteringChoice/SortBy";
-import { sortChoice } from "../../context/FilterContext";
 import { useFilter } from "../../context/FilterContext";
 
 function DropMenuskeleton() {
