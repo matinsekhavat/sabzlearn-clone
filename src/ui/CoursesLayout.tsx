@@ -13,7 +13,7 @@ function CoursesLayout({ children }: CoursesLayoutProps) {
       <CourseFilter />
       <div>
         <div className="hidden md:flex md:items-center gap-4 bg-white h-16 px-2 rounded-xl mb-2">
-          <div className="flex items-center gap-2 text-xl text-slate-900">
+          <div className="flex items-center gap-2 text-lg text-slate-900">
             <span>
               <TbArrowsSort />
             </span>
