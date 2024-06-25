@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 type Handler = () => void;
-type ListenCapturing = boolean;
+type ListenCapturing = boolean; //default set to true
 
 export default function useDetectOutsideClick(
   ref: React.RefObject<HTMLElement>,
