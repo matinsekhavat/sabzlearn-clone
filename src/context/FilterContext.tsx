@@ -5,7 +5,10 @@ type FilterProviderProps = {
 };
 
 export type sortChoice = "all" | "expensive" | "cheap" | "popular"; // add more options as needed
-
+export type filterByChoice = {
+  free: boolean;
+  presell: boolean;
+};
 type FilterContextType = {
   isFilterVisible: boolean;
   isCourseVisible: boolean;
@@ -17,6 +20,8 @@ type FilterContextType = {
   sortBy: sortChoice;
   setSortBy: (value: sortChoice) => void;
   sortByHandler: (value: sortChoice) => void;
+  filterBy: filterByChoice;
+  setFilterBy: (value: filterByChoice) => void;
 };
 
 const FilterContext = createContext<FilterContextType | null>(null);
@@ -26,7 +31,10 @@ const FilterProvider = ({ children }: FilterProviderProps) => {
   const [isFilterVisible, setIsFilterVisible] = useState<boolean>(false);
   const [isCourseVisible, setIsCourseVisible] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<sortChoice>("all");
-
+  const [filterBy, setFilterBy] = useState<filterByChoice>({
+    free: false,
+    presell: false,
+  });
   function filterMenuHandler() {
     setIsFilterVisible(true);
   }
@@ -56,6 +64,8 @@ const FilterProvider = ({ children }: FilterProviderProps) => {
         sortBy,
         setSortBy,
         sortByHandler,
+        filterBy,
+        setFilterBy,
       }}
     >
       {children}
