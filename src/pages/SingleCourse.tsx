@@ -27,7 +27,7 @@ function SingleCourse() {
           {/* here must add CountDown Feature */}
 
           {/* Course shipment detail */}
-          <div>
+          <div className="flex items-center justify-center">
             <div className="flex justify-center my-8">
               <div className="flex items-center gap-2">
                 <div className="line-through text-gray-400">
@@ -37,7 +37,11 @@ function SingleCourse() {
                 <span>تومان</span>
               </div>
             </div>
-            <button></button>
+
+            <button className=" bg-green-500 w-full py-2 rounded-md text-white">
+              {" "}
+              ثبت نام در دوره
+            </button>
           </div>
         </div>
       </div>
