@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 
 import Courses from "./pages/Courses";
 import FilterProvider from "./context/FilterContext";
+import SingleCourse from "./pages/SingleCourse";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             </FilterProvider>
           }
         />
+        <Route path="/course/:courseTitle" element={<SingleCourse />} />
       </Route>
     </Routes>
   );
