@@ -4,15 +4,20 @@ interface CourseExtraInfoProps {
   icon: JSX.Element;
   title: string;
   description: string;
+  bgColor?: string;
 }
 
 function CourseExtraInfo({
   icon = <FaClock />,
   title,
   description,
+  bgColor = "white",
 }: CourseExtraInfoProps) {
   return (
-    <div className="flex flex-row items-center gap-4 bg-white rounded-xl p-3 md:p-4 lg:p-5">
+    <div
+      style={{ backgroundColor: bgColor }}
+      className="flex flex-row items-center gap-4  rounded-xl p-3 md:p-4 lg:p-5 "
+    >
       <span className="text-green-500 text-[42px]  ">{icon}</span>
       <div className="space-y-1 md:space-y-2 lg:space-y-3">
         <p className="text-base font-semibold ">{title}</p>
