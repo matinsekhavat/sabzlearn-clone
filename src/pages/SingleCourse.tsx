@@ -6,6 +6,7 @@ import { ImCalendar } from "react-icons/im";
 import { FaUserFriends } from "react-icons/fa";
 import { TiShoppingBag } from "react-icons/ti";
 import { BsCameraVideo } from "react-icons/bs";
+import CourseStatus from "../features/courses/SingleCourseDiff/CourseStatus";
 
 function SingleCourse() {
   return (
@@ -91,7 +92,9 @@ function SingleCourse() {
             />
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 space-y-8">Aside</div>
+        <div className="col-span-12 lg:col-span-4 space-y-8">
+          <CourseStatus />
+        </div>
       </div>
     </main>
   );
