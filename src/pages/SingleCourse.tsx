@@ -1,3 +1,4 @@
+import CourseExtraInfo from "../features/courses/SingleCourseDiff/CourseExtraInfo";
 import { e2p } from "../utils/replaceNumber";
 
 function SingleCourse() {
@@ -45,6 +46,19 @@ function SingleCourse() {
             </button>
           </div>
         </div>
+      </div>
+      {/* Grid system */}
+      <div className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
+        {/* CourseExtraInfo List */}
+        <div className="col-span-12 lg:col-span-8">
+          <CourseExtraInfo />
+          <CourseExtraInfo />
+          <CourseExtraInfo />
+          <CourseExtraInfo />
+          <CourseExtraInfo />
+          <CourseExtraInfo />
+        </div>
+        <div className="col-span-12 lg:col-span-4 space-y-8">Aside</div>
       </div>
     </main>
   );
