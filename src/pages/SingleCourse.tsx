@@ -1,5 +1,11 @@
+import { IoIosInformationCircleOutline } from "react-icons/io";
 import CourseExtraInfo from "../features/courses/SingleCourseDiff/CourseExtraInfo";
 import { e2p } from "../utils/replaceNumber";
+import { IoTimeOutline } from "react-icons/io5";
+import { ImCalendar } from "react-icons/im";
+import { FaUserFriends } from "react-icons/fa";
+import { TiShoppingBag } from "react-icons/ti";
+import { BsCameraVideo } from "react-icons/bs";
 
 function SingleCourse() {
   return (
@@ -51,12 +57,39 @@ function SingleCourse() {
       <div className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
         {/* CourseExtraInfo List */}
         <div className="col-span-12 lg:col-span-8">
-          <CourseExtraInfo />
-          <CourseExtraInfo />
-          <CourseExtraInfo />
-          <CourseExtraInfo />
-          <CourseExtraInfo />
-          <CourseExtraInfo />
+          <div className="grid grid-cols-3 gap-4">
+            <CourseExtraInfo
+              title="وضعیت دوره"
+              description="تکمیل شده"
+              icon={<IoIosInformationCircleOutline />}
+            />
+            <CourseExtraInfo
+              title="مدت زمان دوره"
+              description={`${e2p(56)} ساعت
+`}
+              icon={<IoTimeOutline />}
+            />
+            <CourseExtraInfo
+              title="آخرین بروزرسانی"
+              description={`${e2p("1402/12/21")}`}
+              icon={<ImCalendar />}
+            />
+            <CourseExtraInfo
+              title="روش پشتیبانی"
+              description="آنلاین"
+              icon={<FaUserFriends />}
+            />
+            <CourseExtraInfo
+              title="پیش نیاز"
+              description="React.js"
+              icon={<TiShoppingBag />}
+            />
+            <CourseExtraInfo
+              title="نوع مشاهده"
+              description="به صورت آنلاین"
+              icon={<BsCameraVideo />}
+            />
+          </div>
         </div>
         <div className="col-span-12 lg:col-span-4 space-y-8">Aside</div>
       </div>
