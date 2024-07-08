@@ -35,8 +35,8 @@ function Footer() {
             headTitle="شبکه های اجتماعی"
             hasIcon={true}
             accessLink={[
-              { title: "@matinsekhavat", path: "/", icons: <FaTelegram /> },
-              { title: "@matinsekhavat", path: "/", icons: <FaInstagram /> },
+              { title: "@matin.sekhavat", path: "/", icons: <FaTelegram /> },
+              { title: "@matin_sekhavat", path: "/", icons: <FaInstagram /> },
               { title: "@matinsekhavat", path: "/", icons: <FaLinkedin /> },
             ]}
           />
