@@ -5,7 +5,7 @@ import ProgressBar from "../../../ui/ProgressBar";
 
 function CourseStatus() {
   return (
-    <div className="bg-white p-4 rounded-xl h-full ">
+    <div className="bg-white p-[1.4rem] rounded-xl  ">
       <div className="grid grid-cols-2 gap-2">
         <CourseExtraInfo
           title={`${e2p(1593)}`}
