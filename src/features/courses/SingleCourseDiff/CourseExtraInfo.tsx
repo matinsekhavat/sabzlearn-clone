@@ -16,7 +16,7 @@ function CourseExtraInfo({
   return (
     <div
       style={{ backgroundColor: bgColor }}
-      className="flex flex-row items-center gap-4  rounded-xl p-3 md:p-4 lg:p-5 "
+      className="flex flex-col sm:flex-row items-center gap-4 text-sm sm:text-base justify-center  text-center rounded-xl p-3 md:p-4 lg:p-5 "
     >
       <span className="text-green-500 text-[42px]  ">{icon}</span>
       <div className="space-y-1 md:space-y-2 lg:space-y-3">
