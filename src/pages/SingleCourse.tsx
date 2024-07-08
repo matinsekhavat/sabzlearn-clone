@@ -7,11 +7,12 @@ import { FaUserFriends } from "react-icons/fa";
 import { TiShoppingBag } from "react-icons/ti";
 import { BsCameraVideo } from "react-icons/bs";
 import CourseStatus from "../features/courses/SingleCourseDiff/CourseStatus";
+import TeacherBox from "../features/courses/SingleCourseDiff/TeacherBox";
 
 function SingleCourse() {
   return (
     // Course Detail Info  - UI Upperside
-    <main className="container my-16">
+    <div className="container my-16">
       <div className="grid grid-cols-1 bg-white  lg:bg-inherit p-4 rounded-xl lg:grid-cols-2 gap-4 ">
         {/* Course info wrapper Banner */}
         <div className="rounded-xl overflow-hidden lg:order-2">
@@ -55,10 +56,10 @@ function SingleCourse() {
         </div>
       </div>
       {/* Grid system */}
-      <div className="grid grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
+      <div className=" space-y-4 sm:space-y-0 sm:grid sm:grid-cols-12 gap-6 sm:gap-7 mt-7 lg:mt-20">
         {/* CourseExtraInfo List */}
-        <div className="col-span-12 lg:col-span-8">
-          <div className="grid grid-cols-3 gap-4">
+        <div className="sm:col-span-12 lg:col-span-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <CourseExtraInfo
               title="وضعیت دوره"
               description="تکمیل شده"
@@ -92,11 +93,13 @@ function SingleCourse() {
             />
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 space-y-8">
+        <div className="sm:col-span-12 lg:col-span-4 space-y-8">
           <CourseStatus />
+
+          <TeacherBox />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
