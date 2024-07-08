@@ -39,9 +39,7 @@ function FooterAccessLink({ headTitle, accessLink, hasIcon }: FooterProps) {
                 hasIcon ? "flex items-center gap-2" : ""
               }`}
             >
-              {hasIcon && "icons" in item && item.icons && (
-                <span>{item.icons}</span>
-              )}
+              {hasIcon && "icons" in item && item.icons && <p>{item.icons}</p>}
               <span>{item.title}</span>
             </li>
           </Link>
