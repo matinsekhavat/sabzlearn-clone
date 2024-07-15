@@ -8,6 +8,7 @@ import { TiShoppingBag } from "react-icons/ti";
 import { BsCameraVideo } from "react-icons/bs";
 import CourseStatus from "../features/courses/SingleCourseDiff/CourseStatus";
 import TeacherBox from "../features/courses/SingleCourseDiff/TeacherBox";
+import CourseShortLink from "../features/courses/SingleCourseDiff/CourseShortLink";
 
 function SingleCourse() {
   return (
@@ -93,10 +94,13 @@ function SingleCourse() {
             />
           </div>
         </div>
+        {/* left aside include :shortlink - teacher info */}
         <div className="sm:col-span-12 lg:col-span-4 space-y-8">
           <CourseStatus />
 
           <TeacherBox />
+
+          <CourseShortLink>sabzlearn.ir/?p=136</CourseShortLink>
         </div>
       </div>
     </div>
